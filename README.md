@@ -1,4 +1,4 @@
-# 🎃 Halloween Spooky GitHub Profile 👻
+# 🎃  Spooky Season 👻
 
 <div align="center">
 
