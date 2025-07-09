@@ -136,6 +136,9 @@ const necro = {
 
 ![Snake animation](https://github.com/Benjination/Benjination/blob/output/github-contribution-grid-snake.svg)
 
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
 </div>
 
 ---
