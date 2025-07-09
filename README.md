@@ -149,34 +149,3 @@ const necro = {
 *"Code is like humor. When you have to explain it, it's bad." – Cory House*
 
 </div>
-
-
-name: Generate Snake
-
-on:
-  schedule:
-    # Runs at 12am UTC
-    - cron: "0 0 * * *"
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository-owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-      - name: Push snake to output branch
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
