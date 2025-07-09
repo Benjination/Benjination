@@ -114,10 +114,14 @@ const necro = {
 
 </div>
 
-## 🎵 Currently Jamming To
+## 🎵 Now Playing
 
 <div align="center">
 
+<!-- Once you complete the Spotify setup, replace the URL below with your Vercel app URL -->
+![Spotify Now Playing](https://benjination-spotify.vercel.app/api/spotify)
+
+<!-- Fallback badges while setting up -->
 [![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/user/BennyThePooh)
 [![Apple Music](https://img.shields.io/badge/Apple_Music-9933CC?style=for-the-badge&logo=apple-music&logoColor=white)](https://music.apple.com)
 
