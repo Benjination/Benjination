@@ -115,7 +115,7 @@ const necro = {
 
 ## 🎯 Current Projects
 
-- 🔭 I'm currently working on **[ElderScrollsAddons && The Mystical Tarot]** - A brief description of what you're building
+- 🔭 I'm currently working on **[ElderScrollsAddons && The Mystical Tarot]** - Add-Ons for a video game that I love and a tarot card reading app that I am making for iPhone, and other things too
 - 🌱 I'm currently learning **AI/ML, Advanced Software Design Patterns, System Design**
 - 👯 I'm looking to collaborate on **Zenimax Productions**
 - 🤔 I'm looking for help with **Finding a job**
