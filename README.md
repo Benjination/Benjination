@@ -22,26 +22,46 @@
 
 ```typescript
 const necro = {
-    pronouns: "he" | "him",
-    code: ["JavaScript", "TypeScript", "Python", "Java", "C++"],
-    askMeAbout: ["web dev", "tech", "app dev", "photography"],
-    technologies: {
-        frontEnd: {
-            js: ["React", "Vue", "Angular"],
-            css: ["Bootstrap", "Tailwind", "Sass"]
-        },
-        backEnd: {
-            js: ["Node", "Express", "Next.js"],
-            python: ["Django", "Flask", "FastAPI"],
-            misc: ["Docker", "Kubernetes"]
-        },
-        databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
-        misc: ["Firebase", "Socket.IO", "Selenium", "Open-CV"]
+    pronouns: "he" as const,
+    code: ["C", "Java", "SQL", "XML", "Python", "C++", "Swift", "Assembly", "LaTeX"],
+    askMeAbout: [
+        "advanced programming concepts",
+        "data structures",
+        "Android app development",
+        "student task management apps",
+        "project management",
+        "software engineering education"
+    ],
+   technologies: {
+    frontEnd: {
+        js: ["Vanilla JS (for UI logic)", "XML layouts (Android)"],
+        css: ["Material Design", "Custom Styles (Android Themes)"]
     },
-    architecture: ["Serverless Architecture", "Progressive web applications", "Single page applications"],
-    currentFocus: "Building cool stuff with AI and ML",
-    funFact: "There are two ways to write error-free programs; only the third one works"
+    backEnd: {
+        js: ["AI Prompt Generation Scripts"],
+        python: ["Basic Scripting", "Data Analysis (coursework)"]
+    },
+    misc: [
+        "Git/Github",
+        "Android Studio",
+        "XCode",
+        "UNIX",
+        "Confluence",
+        "Jira",
+        "OverLeaf",
+        "Firebase (Firestore for apps)"
+    ]
+}
+    databases: ["Firebase", "SQL"],
+    architecture: [
+        "Modular software design",
+        "Object-oriented programming",
+        "Mobile app architecture"
+    ],
+    currentFocus: "Pursuing an MS in Software Engineering and building Android and productivity apps.",
+    funFact: "Once managed vision centers and now helps students code their own projects!"
 };
+
 ```
 
 ## 🛠️ Technologies & Tools
@@ -58,6 +78,30 @@ const necro = {
 ![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
+
+<div align="center">
+
+  <img src="https://img.shields.io/badge/-C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C"/>
+  <img src="https://img.shields.io/badge/-Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/-Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" alt="Swift"/>
+  <img src="https://img.shields.io/badge/-SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL"/>
+  <img src="https://img.shields.io/badge/-XML-FF6600?style=for-the-badge&logo=xml&logoColor=white" alt="XML"/>
+  <img src="https://img.shields.io/badge/-Assembly-6E4C13?style=for-the-badge&logo=gnu&logoColor=white" alt="Assembly"/>
+  <img src="https://img.shields.io/badge/-LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX"/>
+  <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/-Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio"/>
+  <img src="https://img.shields.io/badge/-Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white" alt="Xcode"/>
+  <img src="https://img.shields.io/badge/-UNIX-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="UNIX"/>
+  <img src="https://img.shields.io/badge/-Overleaf-47A141?style=for-the-badge&logo=overleaf&logoColor=white" alt="Overleaf"/>
+  <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"/>
+  <img src="https://img.shields.io/badge/-Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira"/>
+  <img src="https://img.shields.io/badge/-Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white" alt="Confluence"/>
+
+</div>
+
 
 ## 📊 GitHub Stats
 
