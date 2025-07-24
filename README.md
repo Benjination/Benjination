@@ -148,16 +148,14 @@ const necro = {
 
 <div align="center">
 
-<!-- Dynamic Spotify widget (once setup is complete) -->
-<!-- ![Spotify Now Playing](https://benjination-spotify.vercel.app/api/spotify) -->
+<!-- Dynamic Spotify widget -->
+![Spotify Now Playing](https://benjination.vercel.app/api/spotify)
 
-<!-- Working Spotify badges -->
+<!-- Fallback badges -->
 [![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/user/BennyThePooh)
 [![Apple Music](https://img.shields.io/badge/Apple_Music-9933CC?style=for-the-badge&logo=apple-music&logoColor=white)](https://music.apple.com)
 
 *"Music is the soundtrack to my coding sessions 🎧"*
-
-**Want a dynamic widget?** Check out `QUICK_SPOTIFY_GUIDE.md` for easy setup options!
 
 </div>
 
