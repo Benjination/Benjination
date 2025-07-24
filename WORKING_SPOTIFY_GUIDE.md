@@ -14,7 +14,7 @@ Since the template links are broken, here are **guaranteed working methods**:
    - Name: `GitHub Profile Widget`
    - Description: `For my GitHub README`
    - Website: `https://github.com/Benjination/Benjination`
-   - Redirect URI: `http://localhost:8888/callback`
+   - Redirect URI: `https://example.com/callback`
 3. Save your **Client ID** and **Client Secret**
 
 ### Step 2: Get Refresh Token (Easy Way)

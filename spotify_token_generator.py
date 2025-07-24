@@ -62,23 +62,8 @@ def get_spotify_tokens():
         print("❌ Client ID and Secret are required!")
         return
     
-    print("\n🔧 Starting local server...")
-    
-    # Start local server
-    try:
-        server = HTTPServer(('localhost', 8888), SpotifyAuthHandler)
-        server.auth_code = None
-    except OSError:
-        print("❌ Port 8888 is already in use. Please close other applications using this port.")
-        return
-    
-    # Start server in background
-    server_thread = threading.Thread(target=server.serve_forever)
-    server_thread.daemon = True
-    server_thread.start()
-    
-    # Build authorization URL
-    redirect_uri = "http://localhost:8888/callback"
+    # Use a secure redirect URI that works with Spotify
+    redirect_uri = "https://example.com/callback"
     scope = "user-read-currently-playing user-read-playback-state"
     
     auth_url = f"https://accounts.spotify.com/authorize?" + urllib.parse.urlencode({
@@ -89,28 +74,37 @@ def get_spotify_tokens():
     })
     
     print(f"\n🌐 Opening browser for Spotify authorization...")
-    print(f"If it doesn't open automatically, visit:")
+    print(f"Manual URL (if browser doesn't open):")
     print(f"{auth_url}")
     print()
     
     webbrowser.open(auth_url)
     
-    # Wait for authorization
-    print("⏳ Waiting for authorization (please login and authorize in your browser)...")
-    timeout = 120  # 2 minutes timeout
-    start_time = time.time()
+    print("📋 After authorizing:")
+    print("1. You'll be redirected to example.com (which won't load)")
+    print("2. Copy the FULL URL from your browser's address bar")
+    print("3. Paste it below")
+    print()
     
-    while server.auth_code is None and (time.time() - start_time) < timeout:
-        time.sleep(1)
+    # Get the redirect URL manually
+    redirect_url = input("Paste the full redirect URL here: ").strip()
     
-    server.shutdown()
-    
-    if server.auth_code is None:
-        print("❌ Authorization timed out or failed!")
-        print("Please make sure you clicked 'Agree' in the browser.")
+    # Extract authorization code from URL
+    try:
+        parsed_url = urllib.parse.urlparse(redirect_url)
+        query_params = urllib.parse.parse_qs(parsed_url.query)
+        
+        if 'code' not in query_params:
+            print("❌ No authorization code found in URL!")
+            print("Make sure you copied the complete URL after being redirected.")
+            return
+            
+        auth_code = query_params['code'][0]
+        print("✅ Authorization code extracted successfully!")
+        
+    except Exception as e:
+        print(f"❌ Error parsing URL: {e}")
         return
-    
-    print("✅ Authorization successful!")
     
     # Exchange code for tokens
     print("\n🔄 Exchanging code for tokens...")
@@ -119,7 +113,7 @@ def get_spotify_tokens():
     
     data = urllib.parse.urlencode({
         "grant_type": "authorization_code",
-        "code": server.auth_code,
+        "code": auth_code,
         "redirect_uri": redirect_uri
     }).encode()
     
@@ -151,7 +145,9 @@ def get_spotify_tokens():
                 print("\n🔗 Vercel Dashboard: https://vercel.com/dashboard")
                 
             else:
+                error_text = response.read().decode()
                 print(f"❌ Token exchange failed: HTTP {response.status}")
+                print(f"Error: {error_text}")
                 
     except Exception as e:
         print(f"❌ Error during token exchange: {e}")

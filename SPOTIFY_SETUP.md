@@ -43,12 +43,12 @@ Follow the detailed steps below for full control.
    - **App Name**: `GitHub README Now Playing`
    - **App Description**: `Dynamic Spotify widget for GitHub profile`
    - **Website**: `https://github.com/Benjination/Benjination`
-   - **Redirect URI**: `https://example.com/callback` (for manual method) OR `http://localhost:8888/callback` (for Python script)
+   - **Redirect URI**: `https://example.com/callback`
 5. Check the boxes for Terms of Service
 6. Click "Save"
 7. Note down your **Client ID** and **Client Secret**
 
-**Note:** If using the Python script method, you can use `http://localhost:8888/callback` as it runs locally.
+**Note:** We use `https://example.com/callback` as it's secure and the script will handle extracting the code from the URL.
 
 ## Step 2: Get Authorization Code
 
