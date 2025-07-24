@@ -8,21 +8,26 @@ This guide will help you set up the dynamic Spotify "Now Playing" widget for you
 2. **Vercel Account** (free tier is sufficient)
 3. **GitHub Account** (which you already have)
 
-## ⚡ Quick Alternative: Use My Template
+## ⚡ Quick Alternative: Use Working Templates
 
-**Option 1 - Online Template (Easiest):**
-1. Go to: https://spotify-github-profile.vercel.app/
+**Option 1 - Novatorem (Most Popular):**
+1. Go to: https://novatorem-kyletimmermans.vercel.app/
 2. Click "Login with Spotify"
 3. Copy the generated markdown code
 4. Paste it in your README
 
-**Option 2 - Use Python Script (Recommended):**
+**Option 2 - Spotify Now Playing (Alternative):**
+1. Go to: https://spotify-now-playing-readme.vercel.app/
+2. Follow the setup instructions
+3. Use the generated widget code
+
+**Option 3 - Use Python Script (Recommended for Custom Widget):**
 1. First create your Spotify app (see Step 1 below)
 2. Run: `python3 spotify_token_generator.py`
 3. Follow the prompts - it will open a browser and get your tokens automatically!
 4. Use the tokens in Vercel (see Step 4 below)
 
-**Option 3 - Manual Setup:**
+**Option 4 - Manual Setup:**
 Follow the detailed steps below for full control.
 
 ---
