@@ -8,6 +8,25 @@ This guide will help you set up the dynamic Spotify "Now Playing" widget for you
 2. **Vercel Account** (free tier is sufficient)
 3. **GitHub Account** (which you already have)
 
+## ⚡ Quick Alternative: Use My Template
+
+**Option 1 - Online Template (Easiest):**
+1. Go to: https://spotify-github-profile.vercel.app/
+2. Click "Login with Spotify"
+3. Copy the generated markdown code
+4. Paste it in your README
+
+**Option 2 - Use Python Script (Recommended):**
+1. First create your Spotify app (see Step 1 below)
+2. Run: `python3 spotify_token_generator.py`
+3. Follow the prompts - it will open a browser and get your tokens automatically!
+4. Use the tokens in Vercel (see Step 4 below)
+
+**Option 3 - Manual Setup:**
+Follow the detailed steps below for full control.
+
+---
+
 ## Step 1: Create Spotify App
 
 1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
@@ -17,22 +36,25 @@ This guide will help you set up the dynamic Spotify "Now Playing" widget for you
    - **App Name**: `GitHub README Now Playing`
    - **App Description**: `Dynamic Spotify widget for GitHub profile`
    - **Website**: `https://github.com/Benjination/Benjination`
-   - **Redirect URI**: `http://localhost:3000/callback`
+   - **Redirect URI**: `https://example.com/callback` (for manual method) OR `http://localhost:8888/callback` (for Python script)
 5. Check the boxes for Terms of Service
 6. Click "Save"
 7. Note down your **Client ID** and **Client Secret**
+
+**Note:** If using the Python script method, you can use `http://localhost:8888/callback` as it runs locally.
 
 ## Step 2: Get Authorization Code
 
 1. Replace `YOUR_CLIENT_ID` in this URL with your actual Client ID:
 ```
-https://accounts.spotify.com/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=http://localhost:3000/callback&scope=user-read-currently-playing
+https://accounts.spotify.com/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=https://example.com/callback&scope=user-read-currently-playing
 ```
 
 2. Visit the URL in your browser
 3. Log in and authorize the app
-4. You'll be redirected to `localhost:3000/callback?code=AUTHORIZATION_CODE`
-5. Copy the `AUTHORIZATION_CODE` from the URL
+4. You'll be redirected to `https://example.com/callback?code=AUTHORIZATION_CODE`
+5. The page won't load (that's expected!), but look at the URL in your browser's address bar
+6. Copy the `AUTHORIZATION_CODE` from the URL parameter
 
 ## Step 3: Get Refresh Token
 
@@ -43,7 +65,7 @@ curl -X POST "https://accounts.spotify.com/api/token" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "grant_type=authorization_code" \
   -d "code=AUTHORIZATION_CODE" \
-  -d "redirect_uri=http://localhost:3000/callback" \
+  -d "redirect_uri=https://example.com/callback" \
   -d "client_id=YOUR_CLIENT_ID" \
   -d "client_secret=YOUR_CLIENT_SECRET"
 ```
